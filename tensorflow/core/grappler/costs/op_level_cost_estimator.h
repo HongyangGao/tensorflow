@@ -72,6 +72,7 @@ class OpLevelCostEstimator {
     int64 iz;         // Input depth.
     int64 kx;         // Kernel x.
     int64 ky;         // Kernel y.
+    int64 kz;         // Kernel y.
     int64 oz;         // Output depth.
     int64 ox;         // Output size x.
     int64 oy;         // Output size y.

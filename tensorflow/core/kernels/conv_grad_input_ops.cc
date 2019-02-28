@@ -899,9 +899,11 @@ void LaunchConv2DBackpropInputOp<GPUDevice, T>::operator()(
   Tensor transformed_filter;
   OP_REQUIRES_OK(
       ctx, ctx->allocate_temp(DataTypeToEnum<T>::value,
-                              TensorShape({dims.out_depth, dims.in_depth,
-                                           dims.spatial_dims[0].filter_size,
-                                           dims.spatial_dims[1].filter_size}),
+   //                           TensorShape({dims.out_depth, dims.in_depth,
+   //                                        dims.spatial_dims[0].filter_size,
+   //                                        dims.spatial_dims[1].filter_size}),
+                              TensorShape({filter_shape.dim_size(3), filter_shape.dim_size(2),
+                                           filter_shape.dim_size(0), filter_shape.dim_size(1)}),
                               &transformed_filter));
 
   functor::TransformFilter<GPUDevice, T, int, 4>()(
