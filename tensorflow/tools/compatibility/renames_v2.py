@@ -24,6 +24,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+
 renames = {
     'tf.AUTO_REUSE': 'tf.compat.v1.AUTO_REUSE',
     'tf.AttrValue': 'tf.compat.v1.AttrValue',
@@ -447,6 +448,7 @@ renames = {
     'tf.nn.rnn_cell.LSTMStateTuple': 'tf.compat.v1.nn.rnn_cell.LSTMStateTuple',
     'tf.nn.rnn_cell.MultiRNNCell': 'tf.compat.v1.nn.rnn_cell.MultiRNNCell',
     'tf.nn.rnn_cell.ResidualWrapper': 'tf.compat.v1.nn.rnn_cell.ResidualWrapper',
+    'tf.nn.rnn_cell.RNNCell': 'tf.compat.v1.nn.rnn_cell.RNNCell',
     'tf.nn.static_bidirectional_rnn': 'tf.compat.v1.nn.static_bidirectional_rnn',
     'tf.nn.static_rnn': 'tf.compat.v1.nn.static_rnn',
     'tf.nn.uniform_candidate_sampler': 'tf.random.uniform_candidate_sampler',
@@ -636,6 +638,9 @@ renames = {
     'tf.summary.text': 'tf.compat.v1.summary.text',
     'tf.svd': 'tf.linalg.svd',
     'tf.tables_initializer': 'tf.compat.v1.tables_initializer',
+    'tf.tensor_scatter_add': 'tf.tensor_scatter_nd_add',
+    'tf.tensor_scatter_sub': 'tf.tensor_scatter_nd_sub',
+    'tf.tensor_scatter_update': 'tf.tensor_scatter_nd_update',
     'tf.test.StubOutForTesting': 'tf.compat.v1.test.StubOutForTesting',
     'tf.test.compute_gradient_error': 'tf.compat.v1.test.compute_gradient_error',
     'tf.test.get_temp_dir': 'tf.compat.v1.test.get_temp_dir',
